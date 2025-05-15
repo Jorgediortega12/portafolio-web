@@ -1,0 +1,54 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+import AboutMe from "@/components/AboutMe.astro";
+import CodeIcon from "@/components/icons/Code.astro";
+import ProfileCheck from "@/components/icons/ProfileCheck.astro";
+import Projects from "@/components/Projects.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import Hero from "@/components/Hero.astro";
+import TitleSection from "@/components/TitleSection.astro";
+import Studen from "@/components/icons/Student.astro";
+import ExperienceItem from "@/components/ExperienceItem.astro";
+---
+
+<Layout
+  title="Portfolio of Jorge Diaz - Web Developer and Programmer."
+  description="Hire Jorge Diaz to create your web or mobile app. He's a web developer and soon to be one of the best developers in my country."
+>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <Hero />
+    </SectionContainer>
+  </main>
+  <div class="space-y-24">
+    <SectionContainer id="experiencia">
+      <TitleSection>
+        <Studen class="size-8" />
+        Education
+        <!-- <h2>Cursos remotos en Udemy y Aprendizaje Autodidacta</h2> -->
+      </TitleSection>
+      <ExperienceItem
+        title="Conocimientos"
+        company="Cursos remotos de Udemy y Aprendizaje Autodidacta"
+        description="HTML5, CCS3, Tailwind, Javascript, TypeScript, React.JS, React Native, Next.JS, Docker, Prisma, Nodejs, Postman, VsCode, Git, GitHub, Flutter"
+      />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <TitleSection>
+        <CodeIcon class="size-7" />
+        Project
+      </TitleSection>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="sobre-mi">
+      <TitleSection>
+        <ProfileCheck class="size-8" />
+        Abaout Me
+      </TitleSection>
+      <AboutMe />
+    </SectionContainer>
+  </div>
+</Layout>
